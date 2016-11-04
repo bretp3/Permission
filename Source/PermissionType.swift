@@ -36,9 +36,9 @@ public enum PermissionType {
     case locationWhenInUse
     #endif
     
-    #if PERMISSION_NOTIFICATIONS
+    //#if PERMISSION_NOTIFICATIONS
     case notifications(UIUserNotificationSettings)
-    #endif
+    //#endif
     
     #if PERMISSION_MICROPHONE
     case microphone
@@ -92,9 +92,9 @@ extension PermissionType: CustomStringConvertible {
         if case .locationWhenInUse = self { return "Location" }
         #endif
         
-        #if PERMISSION_NOTIFICATIONS
+        //#if PERMISSION_NOTIFICATIONS
         if case .notifications = self { return "Notifications" }
-        #endif
+        //#endif
         
         #if PERMISSION_MICROPHONE
         if case .microphone = self { return "Microphone" }

@@ -91,7 +91,7 @@ open class Permission: NSObject {
     open static let mediaLibrary = Permission(type: .mediaLibrary)
     #endif
 
-    #if PERMISSION_NOTIFICATIONS
+    //#if PERMISSION_NOTIFICATIONS
     /// The permission to send notifications.
     open static let notifications: Permission = {
         let settings = UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil)
@@ -124,7 +124,7 @@ open class Permission: NSObject {
         _notifications = permission
         return permission
     }
-    #endif
+    //#endif
     
     /// The permission domain.
     open let type: PermissionType
@@ -144,9 +144,9 @@ open class Permission: NSObject {
         if case .locationWhenInUse = type { return statusLocationWhenInUse }
         #endif
         
-        #if PERMISSION_NOTIFICATIONS
+        //#if PERMISSION_NOTIFICATIONS
         if case .notifications = type { return statusNotifications }
-        #endif
+        //#endif
         
         #if PERMISSION_MICROPHONE
         if case .microphone = type { return statusMicrophone }
@@ -260,9 +260,9 @@ open class Permission: NSObject {
         if case .locationWhenInUse = type { requestLocationWhenInUse(callback) }
         #endif
         
-        #if PERMISSION_NOTIFICATIONS
+        //#if PERMISSION_NOTIFICATIONS
         if case .notifications = type { requestNotifications(callback) }
-        #endif
+        //#endif
         
         #if PERMISSION_MICROPHONE
         if case .microphone = type { requestMicrophone(callback) }

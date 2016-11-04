@@ -22,7 +22,7 @@
 // SOFTWARE.
 //
 
-#if PERMISSION_NOTIFICATIONS
+//#if PERMISSION_NOTIFICATIONS
 private var notificationTimer: Timer?
     
 internal extension Permission {
@@ -66,4 +66,4 @@ internal extension Permission {
         }
     }
 }
-#endif
+//#endif
