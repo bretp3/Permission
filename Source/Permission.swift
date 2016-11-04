@@ -184,7 +184,8 @@ open class Permission: NSObject {
         if case .mediaLibrary = type { return statusMediaLibrary }
         #endif
         
-        fatalError()
+        return .notDetermined
+        //fatalError()
     }
     
     /// Determines whether to present the pre-permission alert.
@@ -300,7 +301,7 @@ open class Permission: NSObject {
         if case .mediaLibrary = type { requestMediaLibrary(callback) }
         #endif
         
-        fatalError()
+        //fatalError()
     }
     
     internal func callbackAsync(_ with: PermissionStatus) {
