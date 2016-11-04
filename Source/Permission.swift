@@ -49,15 +49,15 @@ open class Permission: NSObject {
     open static let microphone = Permission(type: .microphone)
     #endif
     
-    #if PERMISSION_CAMERA
+    //#if PERMISSION_CAMERA
     /// The permission to access the camera.
     open static let camera = Permission(type: .camera)
-    #endif
+    //#endif
     
-    #if PERMISSION_PHOTOS
+    //#if PERMISSION_PHOTOS
     /// The permission to access the user's photos.
     open static let photos = Permission(type: .photos)
-    #endif
+    //#endif
     
     #if PERMISSION_REMINDERS
     /// The permission to access the user's reminders.
@@ -152,13 +152,13 @@ open class Permission: NSObject {
         if case .microphone = type { return statusMicrophone }
         #endif
         
-        #if PERMISSION_CAMERA
+        //#if PERMISSION_CAMERA
         if case .camera = type { return statusCamera }
-        #endif
+        //#endif
         
-        #if PERMISSION_PHOTOS
+        //#if PERMISSION_PHOTOS
         if case .photos = type { return statusPhotos }
-        #endif
+        //#endif
         
         #if PERMISSION_REMINDERS
         if case .reminders = type { return statusReminders }
@@ -268,13 +268,13 @@ open class Permission: NSObject {
         if case .microphone = type { requestMicrophone(callback) }
         #endif
         
-        #if PERMISSION_CAMERA
+        //#if PERMISSION_CAMERA
         if case .camera = type { requestCamera(callback) }
-        #endif
+        //#endif
         
-        #if PERMISSION_PHOTOS
+        //#if PERMISSION_PHOTOS
         if case .photos = type { requestPhotos(callback) }
-        #endif
+        //#endif
         
         #if PERMISSION_REMINDERS
         if case .reminders = type { requestReminders(callback) }

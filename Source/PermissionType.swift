@@ -44,13 +44,13 @@ public enum PermissionType {
     case microphone
     #endif
     
-    #if PERMISSION_CAMERA
+    //#if PERMISSION_CAMERA
     case camera
-    #endif
+    //#endif
     
-    #if PERMISSION_PHOTOS
+    //#if PERMISSION_PHOTOS
     case photos
-    #endif
+    //#endif
     
     #if PERMISSION_REMINDERS
     case reminders
@@ -100,13 +100,13 @@ extension PermissionType: CustomStringConvertible {
         if case .microphone = self { return "Microphone" }
         #endif
         
-        #if PERMISSION_CAMERA
+        //#if PERMISSION_CAMERA
         if case .camera = self { return "Camera" }
-        #endif
+        //#endif
         
-        #if PERMISSION_PHOTOS
+        ////#if PERMISSION_PHOTOS
         if case .photos = self { return "Photos" }
-        #endif
+        //#endif
         
         #if PERMISSION_REMINDERS
         if case .reminders = self { return "Reminders" }

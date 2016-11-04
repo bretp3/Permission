@@ -22,7 +22,7 @@
 // SOFTWARE.
 //
 
-#if PERMISSION_CAMERA
+//#if PERMISSION_CAMERA
 import AVFoundation
 
 internal extension Permission {
@@ -47,4 +47,4 @@ internal extension Permission {
         }
     }
 }
-#endif
+//#endif

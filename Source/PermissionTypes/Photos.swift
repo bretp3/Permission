@@ -22,7 +22,7 @@
 // SOFTWARE.
 //
 
-#if PERMISSION_PHOTOS
+////#if PERMISSION_PHOTOS
 import Photos
 
 internal extension Permission {
@@ -47,4 +47,4 @@ internal extension Permission {
         }
     }
 }
-#endif
+//#endif
